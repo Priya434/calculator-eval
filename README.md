@@ -7,4 +7,4 @@ A simple calculator
 
 - The calculator can be accessed on any screen size.
 
-Have fun calculating!
+Have fun [calculating!](https://priya434.github.io/calculator-eval/)
