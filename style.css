@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: bisque;
+    text-align: center;
+}
+
+h1 {
+    color: blueviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0.5em;
+}
+
+.calculator {
+    background-color: cornflowerblue;
+    border: 2px solid black;
+    color: whitesmoke;
+    font-size: 1.25rem;
+    width: calc(300rem/16);
+    margin: 2em auto;
+}
+
+.container {
+    /* border: 1px solid; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* screen */
+.screen {
+    display: flex;
+    flex-flow: column nowrap;
+    grid-column: span 4;
+}
+
+.display,
+.result {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 1rem;
+    padding: 1em;
+}
+
+.display {
+    border-top: 1px solid black;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 1.5em;
+}
+
+.result {
+    border-bottom: 1px solid black;
+    font-size: 1.5rem;
+    justify-content: flex-end;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-top: 0.5em;
+    padding-bottom: 1.5em;
+}
+
+/* clear screen buttons */
+.clear-buttons {
+    /* border: 1px solid; */
+    display: flex;
+    flex-flow: row nowrap;
+    grid-column: span 2;
+}
+
+[data-key="Delete"] {
+    flex-grow: 1;
+}
+
+/* operators 1 / * */
+.operators1 {
+    /* border: 1px solid; */
+    display: flex;
+    flex-flow: row nowrap;
+    grid-column: span 2;
+}
+
+[data-key="/"],
+[data-key="*"] {
+    flex-grow: 1;
+}
+
+/* operators 2 - + */
+.operators2 {
+    /* border: 1px solid; */
+    display: flex;
+    flex-flow: column nowrap;
+    grid-column: 4;
+    grid-row: span 3;
+}
+
+[data-key="Enter"] {
+    flex-grow: 2;
+}
+
+/* numbers */
+.numbers {
+    /* border: 1px solid; */
+    display: grid;
+    grid-column: span 3;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+[data-key='0'] {
+    grid-column: span 2;
+}
+
+/* kbd */
+
+kbd {
+    border: 1px solid black;
+    padding: 1em;
+}
+
+kbd:hover,
+.active {
+    background-color: darkslateblue;
+}
+
+footer {
+    font-size: 1.25rem;
+    margin: 1em;
+}
+
+footer a {
+    color: black;
+}
+
+footer a:hover {
+    color: blueviolet;
+}
