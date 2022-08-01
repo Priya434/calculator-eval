@@ -34,11 +34,8 @@ function showDisplay(key) {
     }
 
     if (key === 'Delete') {
-        let bool = confirm("Do you want to clear the display?");
-        if (bool) {
             display.textContent = '';
             result.textContent = '';
-        }
     }
 
     console.log(key);
